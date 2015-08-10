@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
     BCrypt::Password.create(string, cost: cost)
   end
 
-  # Returns a random tokeb
+  # Returns a random token
   def User.new_token
     SecureRandom.urlsafe_base64
   end
